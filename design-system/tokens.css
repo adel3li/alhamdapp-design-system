@@ -1,0 +1,135 @@
+/* الحمد — generated from tokens.json */
+
+:root, [data-theme="dark"] {
+  --ground: #15152A;
+  --ground-deep: #111126;
+  --ground-deepest: #0C0C1C;
+  --glass-card: #1E1E38;
+  --glass-raised: #25232E;
+  --glass-inset: #1B1B33;
+  --hairline: #2E2E4A;
+  --text: #EDEDF5;
+  --text-body: #C7C4D8;
+  --text-muted: #AEAECB;
+  --accent-text: #E4C368;
+  --accent: #C8A951;
+  --accent-soft: #C8A9512E;
+  --primary: #6C63FF;
+  --primary-pressed: #594DFF;
+  --on-primary: #FFFFFF;
+  --danger: #E5837A;
+  --quran-text: #E4C368;
+  --quran-border: #C8A95147;
+  --scrim: #11112699;
+  --lattice-stroke: #EDEDF50D;
+  --cone: #EDEDF50F;
+  --icon-ground: #2A1F19;
+  --icon-thread: #D4704F;
+  --shadow-card: 0 12px 32px rgba(0,0,0,0.35);
+  --shadow-raised: 0 16px 40px rgba(0,0,0,0.45);
+}
+
+[data-theme="light"] {
+  --ground: #F4EDE3;
+  --ground-deep: #EDE3D4;
+  --ground-deepest: #E6DAC8;
+  --glass-card: #FBF8F3;
+  --glass-raised: #FFFFFF;
+  --glass-inset: #EFE6D9;
+  --hairline: #DCCFBE;
+  --text: #2A1F19;
+  --text-body: #4A3B32;
+  --text-muted: #6B5A4E;
+  --accent-text: #9E4A30;
+  --accent: #B9573B;
+  --accent-soft: #B9573B24;
+  --primary: #B9573B;
+  --primary-pressed: #8F4229;
+  --on-primary: #FFFFFF;
+  --danger: #A63D30;
+  --quran-text: #2A1F19;
+  --quran-border: #B9573B59;
+  --scrim: #F4EDE3B3;
+  --lattice-stroke: #2A1F190D;
+  --cone: #E6DAC899;
+  --icon-ground: #F4EDE3;
+  --icon-thread: #B9573B;
+  --shadow-card: 0 8px 24px rgba(42,31,25,0.08);
+  --shadow-raised: 0 16px 40px rgba(42,31,25,0.12);
+}
+
+:root {
+  --grid: 4px;
+  --card-gap: 12px;
+  --page-inset: 20px;
+  --card-pad: 20px;
+  --card-pad-lg: 24px;
+  --section-gap: 28px;
+  --tap-min: 44px;
+  --button-h: 56px;
+  --radius-field: 12px;
+  --radius-dialog-button: 14px;
+  --radius-button: 16px;
+  --radius-sheet: 20px;
+  --radius-card: 24px;
+  --radius-pill: 999px;
+  --blur-card: 20px;
+  --blur-raised: 24px;
+  --micro: 150ms;
+  --standard: 250ms;
+  --sentence: 400ms;
+  --ambience: 2500ms;
+  --icon-size: 22px;
+  --icon-size-tab: 24px;
+  --icon-stroke: 1.5;
+  --scale-normal: 1;
+  --scale-large: 1.125;
+  --scale-larger: 1.25;
+  --font-display: "Amiri", serif;
+  --font-quran: "Amiri Quran", "Amiri", serif;
+  --font-ui: "IBM Plex Sans Arabic", system-ui, sans-serif;
+}
+
+@font-face { font-family: 'Amiri'; src: url('fonts/Amiri-Regular-arabic.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'Amiri'; src: url('fonts/Amiri-Bold-arabic.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'Amiri Quran'; src: url('fonts/AmiriQuran-Regular-arabic.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'IBM Plex Sans Arabic'; src: url('fonts/IBMPlexSansArabic-Light-arabic.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'IBM Plex Sans Arabic'; src: url('fonts/IBMPlexSansArabic-Regular-arabic.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'IBM Plex Sans Arabic'; src: url('fonts/IBMPlexSansArabic-Medium-arabic.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'IBM Plex Sans Arabic'; src: url('fonts/IBMPlexSansArabic-SemiBold-arabic.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'IBM Plex Sans Arabic'; src: url('fonts/IBMPlexSansArabic-Bold-arabic.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+
+.wordmark { font-family: var(--font-display); font-size: 72px; line-height: 1; font-weight: 700; }
+
+.blessing-title { font-family: var(--font-display); font-size: 34px; line-height: 1.5; font-weight: 700; }
+
+.screen-title { font-family: var(--font-display); font-size: 30px; line-height: 1.5; font-weight: 700; }
+
+.hadith { font-family: var(--font-display); font-size: 20px; line-height: 1.9; font-weight: 400; }
+
+.dialog-title { font-family: var(--font-display); font-size: 19px; line-height: 1.5; font-weight: 700; }
+
+.scholar { font-family: var(--font-display); font-size: 17px; line-height: 1.9; font-weight: 400; }
+
+.ayah { font-family: var(--font-quran); font-size: 24px; line-height: 2.1; font-weight: 400; }
+
+.button { font-family: var(--font-ui); font-size: 18px; line-height: 1.5; font-weight: 600; }
+
+.body { font-family: var(--font-ui); font-size: 16px; line-height: 1.8; font-weight: 400; }
+
+.field { font-family: var(--font-ui); font-size: 15px; line-height: 1.8; font-weight: 400; }
+
+.secondary { font-family: var(--font-ui); font-size: 14px; line-height: 1.8; font-weight: 400; }
+
+.chip { font-family: var(--font-ui); font-size: 13px; line-height: 1.6; font-weight: 400; }
+
+.label { font-family: var(--font-ui); font-size: 12px; line-height: 1.6; font-weight: 400; }
+
+.tab { font-family: var(--font-ui); font-size: 11px; line-height: 1.6; font-weight: 400; }

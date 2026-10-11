@@ -1,0 +1,144 @@
+/* الحمد — ليل · component styles. Values come from tokens.css; component-only measurements are inline here. */
+html, body { margin: 0; background: var(--ground); }
+.ah { direction: rtl; font-family: var(--font-ui); color: var(--text); -webkit-font-smoothing: antialiased; box-sizing: border-box; }
+.ah *, .ah *::before, .ah *::after { box-sizing: border-box; }
+.ah-pad { padding: var(--page-inset); }
+.ah-stack { display: flex; flex-direction: column; gap: var(--card-gap); }
+.ah-row-flex { display: flex; gap: 10px; align-items: center; }
+.ah-muted { color: var(--text-muted); font-size: 12px; line-height: 1.6; }
+
+/* Focus — intentional addition: solid gold ring */
+.ah :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
+
+/* Surfaces */
+.ah-glass { background: var(--glass-card); border: 1px solid var(--hairline); border-radius: var(--radius-card); padding: 22px; box-shadow: var(--shadow-card); backdrop-filter: blur(var(--blur-card)); -webkit-backdrop-filter: blur(var(--blur-card)); }
+.ah-glass--raised { background: var(--glass-raised); box-shadow: var(--shadow-raised); backdrop-filter: blur(var(--blur-raised)); -webkit-backdrop-filter: blur(var(--blur-raised)); }
+.ah-glass--inset { background: var(--glass-inset); box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
+
+/* Buttons */
+.ah-btn { appearance: none; border: 0; margin: 0; font-family: var(--font-ui); display: flex; align-items: center; justify-content: center; width: 100%; height: var(--button-h); border-radius: var(--radius-button); font-size: 18px; font-weight: 600; cursor: pointer; text-decoration: none; transition: background-color 150ms ease-out; }
+.ah-btn--primary { background: var(--primary); color: var(--on-primary); }
+.ah-btn--primary:active, .ah-btn--primary.is-pressed { background: var(--primary-pressed); }
+.ah-btn--primary:disabled, .ah-btn--primary.is-disabled { background: var(--hairline); color: var(--text-muted); cursor: default; }
+.ah-btn--quiet { background: transparent; border: 1px solid var(--hairline); color: var(--text-body); font-weight: 500; }
+.ah-btn--text { background: transparent; color: var(--accent-text); font-size: 14px; font-weight: 400; height: var(--tap-min); }
+.ah-btn--danger { background: transparent; border: 1px solid var(--hairline); color: var(--danger); font-weight: 500; }
+.ah-btn--sm { height: var(--tap-min); font-size: 14px; }
+.ah-btn--dialog { height: var(--tap-min); font-size: 14px; border-radius: var(--radius-dialog-button); }
+.ah-btn--inline { width: auto; height: auto; padding: 10px 22px; font-size: 14px; border-radius: var(--radius-dialog-button); }
+
+/* Chips */
+.ah-chip { display: inline-flex; align-items: center; border: 1px solid var(--accent); color: var(--accent-text); background: transparent; border-radius: var(--radius-pill); padding: 6px 14px; font-size: 13px; line-height: 1.6; font-family: var(--font-ui); }
+.ah-chip--selected { background: var(--accent-soft); }
+.ah-chip--filled { background: var(--glass-raised); border-color: transparent; color: var(--text-body); }
+
+/* Fields */
+.ah-field { width: 100%; background: var(--glass-inset); border: 1px solid var(--hairline); border-radius: var(--radius-field); padding: 14px 16px; color: var(--text); font: 400 15px/1.6 var(--font-ui); outline: none; }
+.ah-field::placeholder { color: var(--text-muted); opacity: 1; }
+.ah-field:focus-visible { border-color: var(--accent); outline: 2px solid var(--accent-text); outline-offset: 2px; }
+.ah-textarea { background: var(--ground); padding: 12px 14px; font-size: 14px; min-height: 64px; resize: none; display: block; }
+
+/* Toggle — RTL: on = knob on the left */
+.ah-toggle { position: relative; flex: none; width: 46px; height: 26px; border-radius: var(--radius-pill); background: var(--hairline); border: 0; padding: 0; cursor: pointer; transition: background-color 150ms ease-out; }
+.ah-toggle::after { content: ""; position: absolute; top: 3px; right: 3px; width: 20px; height: 20px; border-radius: var(--radius-pill); background: var(--text-muted); transition: right 150ms ease-out, background-color 150ms ease-out; }
+.ah-toggle[aria-checked="true"] { background: var(--primary); }
+.ah-toggle[aria-checked="true"]::after { right: 23px; background: var(--on-primary); }
+
+/* Setting row */
+.ah-setting { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--glass-inset); border: 1px solid var(--hairline); border-radius: var(--radius-button); padding: 14px 16px; font-size: 15px; min-height: var(--tap-min); }
+.ah-setting__end { display: flex; align-items: center; gap: 12px; }
+.ah-setting__value { color: var(--accent-text); font-size: 14px; }
+
+/* Wordmark + thread: thread 0.02·S, dot 0.075·S at the RIGHT end, gap 0.20·S */
+.ah-wordmark { --s: 72px; display: inline-flex; flex-direction: column; gap: calc(var(--s) * 0.2); }
+.ah-wordmark__word { font-family: var(--font-display); font-weight: 700; font-size: var(--s); line-height: 1; color: var(--accent-text); }
+[data-theme="light"] .ah-wordmark__word { color: var(--text); }
+.ah-wordmark__thread { display: flex; align-items: center; }
+.ah-wordmark__dot { flex: none; width: calc(var(--s) * 0.075); height: calc(var(--s) * 0.075); border-radius: var(--radius-pill); background: var(--accent); }
+.ah-wordmark__rule { flex: 1; height: max(1px, calc(var(--s) * 0.02)); background: var(--accent); }
+.ah-wordmark--ink .ah-wordmark__word { color: var(--text); }
+
+/* Thread progress — fill grows leftward from the dot */
+.ah-thread { display: flex; align-items: center; width: 100%; }
+.ah-thread__dot { flex: none; width: 7px; height: 7px; border-radius: var(--radius-pill); background: var(--accent); }
+.ah-thread__track { position: relative; flex: 1; height: 2px; background: var(--hairline); }
+.ah-thread__fill { position: absolute; right: 0; top: 0; height: 2px; background: var(--accent); transition: width 250ms cubic-bezier(0.33, 1, 0.68, 1); }
+
+/* Top bar */
+.ah-topbar { display: flex; align-items: center; justify-content: space-between; background: var(--ground); border: 1px solid var(--hairline); border-radius: var(--radius-button); padding: 10px 14px; }
+.ah-avatar { width: 36px; height: 36px; border-radius: var(--radius-pill); border: 1px solid var(--accent); color: var(--accent-text); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 18px; background: transparent; }
+.ah-topbar__title { font-family: var(--font-display); font-weight: 700; font-size: 22px; color: var(--accent-text); }
+.ah-icon { width: var(--icon-size); height: var(--icon-size); fill: none; stroke: currentColor; stroke-width: var(--icon-stroke); stroke-linecap: round; stroke-linejoin: round; }
+
+/* Tab bar */
+.ah-tabbar { display: flex; background: var(--glass-raised); border: 1px solid var(--hairline); border-radius: var(--radius-sheet); padding: 8px 6px; box-shadow: var(--shadow-raised); }
+.ah-tab { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--text-muted); font-size: 11px; line-height: 1.6; min-height: var(--tap-min); background: none; border: 0; font-family: var(--font-ui); cursor: pointer; }
+.ah-tab::before { content: ""; width: 22px; height: 3px; border-radius: 2px; background: transparent; }
+.ah-tab[aria-current="page"] { color: var(--accent-text); }
+.ah-tab[aria-current="page"]::before { background: var(--accent-text); }
+
+/* Sacred text */
+.ah-quran { background: var(--glass-inset); border: 1px solid var(--quran-border); border-radius: var(--radius-button); padding: 18px; text-align: center; }
+.ah-quran__text { font-family: var(--font-quran); font-size: 22px; line-height: 2.1; color: var(--quran-text); }
+.ah-quran__ref { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+.ah-hadith__text { font-family: var(--font-display); font-size: 19px; line-height: 1.9; color: var(--text); }
+.ah-hadith__ref { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+.ah-scholar { border-top: 1px solid var(--hairline); padding-top: 12px; }
+.ah-scholar__text { font-family: var(--font-display); font-size: 17px; line-height: 1.9; color: var(--text-body); }
+.ah-scholar__by { font-size: 12px; color: var(--accent); margin-top: 4px; }
+
+/* Prompt card */
+.ah-prompt { background: var(--glass-inset); border: 1px solid var(--hairline); border-radius: var(--radius-button); padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.ah-prompt__head { display: flex; align-items: center; gap: 10px; }
+.ah-prompt__num { flex: none; width: 26px; height: 26px; border-radius: var(--radius-pill); background: var(--primary); color: var(--on-primary); display: flex; align-items: center; justify-content: center; font-size: 13px; }
+.ah-prompt__q { font-size: 15px; font-weight: 600; }
+
+/* Calendar */
+.ah-cal { display: grid; grid-template-columns: repeat(7, 44px); gap: 6px; justify-content: center; }
+.ah-cal__dow { text-align: center; color: var(--text-muted); font-size: 12px; }
+.ah-cal__cell { width: 44px; height: 48px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; color: var(--text-muted); font-size: 15px; }
+.ah-cal__cell::after { content: ""; width: 5px; height: 5px; border-radius: var(--radius-pill); }
+.ah-cal__cell.is-done { color: var(--text-body); }
+.ah-cal__cell.is-done::after { background: var(--accent); }
+.ah-cal__cell.is-today span { width: 36px; height: 36px; border: 1.5px solid var(--primary); border-radius: var(--radius-pill); display: flex; align-items: center; justify-content: center; color: var(--text); }
+.ah-cal__cell.is-today::after { display: none; }
+
+/* Dialog, toast, empty state */
+.ah-dialog { background: var(--glass-raised); border: 1px solid var(--hairline); border-radius: var(--radius-sheet); padding: 18px; display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow-raised); }
+.ah-dialog__title { font-family: var(--font-display); font-weight: 700; font-size: 19px; }
+.ah-dialog__body { font-size: 13px; line-height: 1.9; color: var(--text-body); }
+.ah-toast { display: inline-flex; align-items: center; gap: 8px; background: var(--glass-raised); border: 1px solid var(--hairline); border-radius: var(--radius-pill); padding: 8px 18px; font-size: 13px; }
+.ah-toast::before { content: ""; width: 6px; height: 6px; border-radius: var(--radius-pill); background: var(--accent-text); }
+.ah-empty { text-align: center; display: flex; flex-direction: column; gap: 10px; align-items: center; padding: 8px 0; }
+.ah-empty__text { font-size: 14px; line-height: 1.9; color: var(--text-muted); }
+
+/* Patterns — lattice stroke = lattice-stroke (text at 5%); the tile is a data URI so each theme carries its own */
+.ah-lattice { background-color: var(--ground-deep); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cg fill='none' stroke='%23EDEDF5' stroke-opacity='0.05'%3E%3Crect x='35' y='35' width='70' height='70'/%3E%3Crect x='35' y='35' width='70' height='70' transform='rotate(45 70 70)'/%3E%3C/g%3E%3C/svg%3E"); }
+[data-theme="light"] .ah-lattice { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cg fill='none' stroke='%232A1F19' stroke-opacity='0.05'%3E%3Crect x='35' y='35' width='70' height='70'/%3E%3Crect x='35' y='35' width='70' height='70' transform='rotate(45 70 70)'/%3E%3C/g%3E%3C/svg%3E"); }
+.ah-cone { background-color: var(--ground); background-image: radial-gradient(55% 90% at 50% 0%, var(--cone), transparent 70%); }
+[data-theme="light"] .ah-cone { background-image: radial-gradient(40% 50% at 25% 10%, var(--cone), transparent 70%), radial-gradient(40% 50% at 80% 60%, var(--cone), transparent 70%); }
+.ah-onscrim { background: var(--scrim); }
+
+/* Daily blessing + journal entry (from the app screens) */
+.ah-divider-label { display: flex; align-items: center; gap: 12px; color: var(--accent-text); font-size: 14px; }
+.ah-divider-label::before, .ah-divider-label::after { content: ""; flex: 1; height: 1px; background: var(--hairline); }
+.ah-blessing { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.ah-blessing__title { font-family: var(--font-display); font-weight: 700; font-size: 34px; line-height: 1.5; margin: 0; }
+.ah-blessing__desc { font-size: 16px; line-height: 1.8; color: var(--text-body); margin: 0; }
+.ah-entry { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.ah-entry__text { font-size: 16px; line-height: 1.8; color: var(--text); margin: 0; }
+.ah-entry__time { display: flex; align-items: center; gap: 6px; color: var(--text-muted); font-size: 12px; align-self: flex-end; }
+.ah-date-label { color: var(--text-muted); font-size: 14px; }
+
+/* Share card — 1080-wide canvas, shown scaled; follows the active theme; wordmark + thread bottom-left */
+.ah-share { width: 1080px; background: var(--ground); display: flex; flex-direction: column; align-items: stretch; padding: 90px 90px 72px; gap: 48px; }
+.ah-share--story { padding-top: 200px; }
+.ah-share__card { width: 100%; flex: 1; background: var(--glass-card); border: 2px solid var(--hairline); border-radius: 48px; padding: 64px 72px; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center; }
+.ah-share__eyebrow { color: var(--accent); font-weight: 600; font-size: 28px; }
+.ah-share__title { font-family: var(--font-display); font-weight: 700; font-size: 60px; line-height: 1.4; padding-bottom: 20px; border-bottom: 2px solid var(--hairline); min-width: 240px; }
+.ah-share__ayah { font-family: var(--font-quran); font-size: 50px; line-height: 2.1; color: var(--quran-text); }
+.ah-share__ref { font-size: 28px; color: var(--text-muted); }
+.ah-share__footer { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+.ah-share__tagline { font-size: 22px; color: var(--text-muted); }
+
+@media (prefers-reduced-motion: reduce) { .ah * { transition: none !important; animation: none !important; } }

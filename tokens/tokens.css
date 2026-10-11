@@ -1,0 +1,138 @@
+/* الحمد — design tokens, generated from tokens.json (v2). Themes: [data-theme="dark"] ليل (default) · [data-theme="light"] نهار */
+
+:root, [data-theme="dark"] {
+  --ah-ground: #15152A;
+  --ah-ground-deep: #111126;
+  --ah-ground-deepest: #0C0C1C;
+  --ah-glass-card: #1E1E38;
+  --ah-glass-raised: #25232E;
+  --ah-glass-inset: #1B1B33;
+  --ah-hairline: #2E2E4A;
+  --ah-text: #EDEDF5;
+  --ah-text-body: #C7C4D8;
+  --ah-text-muted: #AEAECB;
+  --ah-accent-text: #E4C368;
+  --ah-accent: #C8A951;
+  --ah-accent-soft: #C8A9512E;
+  --ah-primary: #6C63FF;
+  --ah-primary-pressed: #594DFF;
+  --ah-on-primary: #FFFFFF;
+  --ah-danger: #E5837A;
+  --ah-quran-text: #E4C368;
+  --ah-quran-border: #C8A95147;
+  --ah-scrim: #11112699;
+  --ah-lattice-stroke: #EDEDF50D;
+  --ah-cone: #EDEDF50F;
+  --ah-icon-ground: #2A1F19;
+  --ah-icon-thread: #D4704F;
+  --ah-shadow-card: 0 12px 32px rgba(0,0,0,0.35);
+  --ah-shadow-raised: 0 16px 40px rgba(0,0,0,0.45);
+}
+
+[data-theme="light"] {
+  --ah-ground: #F4EDE3;
+  --ah-ground-deep: #EDE3D4;
+  --ah-ground-deepest: #E6DAC8;
+  --ah-glass-card: #FBF8F3;
+  --ah-glass-raised: #FFFFFF;
+  --ah-glass-inset: #EFE6D9;
+  --ah-hairline: #DCCFBE;
+  --ah-text: #2A1F19;
+  --ah-text-body: #4A3B32;
+  --ah-text-muted: #6B5A4E;
+  --ah-accent-text: #9E4A30;
+  --ah-accent: #B9573B;
+  --ah-accent-soft: #B9573B24;
+  --ah-primary: #B9573B;
+  --ah-primary-pressed: #8F4229;
+  --ah-on-primary: #FFFFFF;
+  --ah-danger: #A63D30;
+  --ah-quran-text: #2A1F19;
+  --ah-quran-border: #B9573B59;
+  --ah-scrim: #F4EDE3B3;
+  --ah-lattice-stroke: #2A1F190D;
+  --ah-cone: #E6DAC899;
+  --ah-icon-ground: #F4EDE3;
+  --ah-icon-thread: #B9573B;
+  --ah-shadow-card: 0 8px 24px rgba(42,31,25,0.08);
+  --ah-shadow-raised: 0 16px 40px rgba(42,31,25,0.12);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --ah-ground: #F4EDE3;
+    --ah-ground-deep: #EDE3D4;
+    --ah-ground-deepest: #E6DAC8;
+    --ah-glass-card: #FBF8F3;
+    --ah-glass-raised: #FFFFFF;
+    --ah-glass-inset: #EFE6D9;
+    --ah-hairline: #DCCFBE;
+    --ah-text: #2A1F19;
+    --ah-text-body: #4A3B32;
+    --ah-text-muted: #6B5A4E;
+    --ah-accent-text: #9E4A30;
+    --ah-accent: #B9573B;
+    --ah-accent-soft: #B9573B24;
+    --ah-primary: #B9573B;
+    --ah-primary-pressed: #8F4229;
+    --ah-on-primary: #FFFFFF;
+    --ah-danger: #A63D30;
+    --ah-quran-text: #2A1F19;
+    --ah-quran-border: #B9573B59;
+    --ah-scrim: #F4EDE3B3;
+    --ah-lattice-stroke: #2A1F190D;
+    --ah-cone: #E6DAC899;
+    --ah-icon-ground: #F4EDE3;
+    --ah-icon-thread: #B9573B;
+    --ah-shadow-card: 0 8px 24px rgba(42,31,25,0.08);
+    --ah-shadow-raised: 0 16px 40px rgba(42,31,25,0.12);
+  }
+}
+
+:root {
+  --ah-font-display: "Amiri", serif;
+  --ah-font-quran: "Amiri Quran", "Amiri", serif;
+  --ah-font-ui: "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --ah-text-wordmark: 700 72px/1 var(--ah-font-display);
+  --ah-text-blessing-title: 700 34px/1.5 var(--ah-font-display);
+  --ah-text-screen-title: 700 30px/1.5 var(--ah-font-display);
+  --ah-text-hadith: 400 20px/1.9 var(--ah-font-display);
+  --ah-text-dialog-title: 700 19px/1.5 var(--ah-font-display);
+  --ah-text-scholar: 400 17px/1.9 var(--ah-font-display);
+  --ah-text-ayah: 400 24px/2.1 var(--ah-font-quran);
+  --ah-text-button: 600 18px/1.5 var(--ah-font-ui);
+  --ah-text-body: 400 16px/1.8 var(--ah-font-ui);
+  --ah-text-field: 400 15px/1.8 var(--ah-font-ui);
+  --ah-text-secondary: 400 14px/1.8 var(--ah-font-ui);
+  --ah-text-chip: 400 13px/1.6 var(--ah-font-ui);
+  --ah-text-label: 400 12px/1.6 var(--ah-font-ui);
+  --ah-text-tab: 400 11px/1.6 var(--ah-font-ui);
+  --ah-grid: 4px;
+  --ah-card-gap: 12px;
+  --ah-page-inset: 20px;
+  --ah-card-pad: 20px;
+  --ah-card-pad-lg: 24px;
+  --ah-section-gap: 28px;
+  --ah-tap-min: 44px;
+  --ah-button-h: 56px;
+  --ah-radius-field: 12px;
+  --ah-radius-dialog-button: 14px;
+  --ah-radius-button: 16px;
+  --ah-radius-sheet: 20px;
+  --ah-radius-card: 24px;
+  --ah-radius-pill: 999px;
+  --ah-blur-card: 20px;
+  --ah-blur-raised: 24px;
+  --ah-micro: 150ms;
+  --ah-standard: 250ms;
+  --ah-sentence: 400ms;
+  --ah-ambience: 2500ms;
+  --ah-icon-size: 22px;
+  --ah-icon-size-tab: 24px;
+  --ah-icon-stroke: 1.5;
+  --ah-user-scale: 1; /* 1 · 1.125 · 1.25 */
+}
+
+html { font-size: calc(16px * var(--ah-user-scale)); }
+body { margin: 0; background: var(--ah-ground); color: var(--ah-text); font: var(--ah-text-body); direction: rtl; -webkit-font-smoothing: antialiased; }
+@media (prefers-reduced-motion: reduce) { :root { --ah-micro: 0ms; --ah-standard: 0ms; --ah-sentence: 0ms; --ah-ambience: 800ms; } }
