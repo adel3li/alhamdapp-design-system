@@ -1,0 +1,157 @@
+/* الحمد — ليل — generated from tokens.json */
+
+:root, [data-theme="dark"] {
+  --ground: #15152A;
+  --ground-deep: #111126;
+  --ground-deepest: #0C0C1C;
+  --glass-card: #1E1E38;
+  --glass-raised: #25232E;
+  --glass-inset: #1B1B33;
+  --hairline: #2E2E4A;
+  --text: #EDEDF5;
+  --text-body: #C7C4D8;
+  --text-muted: #AEAECB;
+  --gold-bright: #E4C368;
+  --gold-deep: #C8A951;
+  --violet: #6C63FF;
+  --violet-pressed: #594DFF;
+  --on-violet: #FFFFFF;
+  --danger: #E5837A;
+  --ayah: var(--gold-bright);
+  --quran-border: rgba(200, 169, 81, 0.28);
+  --chip-selected: rgba(200, 169, 81, 0.18);
+  --scrim: rgba(17, 17, 38, 0.6);
+  --bg-grad-1: #DCEBF5;
+  --bg-grad-2: #E7F2E6;
+  --bg-grad-3: #FBF8F2;
+  --bg-blob-1: #CFE3F2;
+  --bg-blob-2: #DDEFD9;
+  --icon-ground: #2A1F19;
+  --icon-thread: #D4704F;
+  --shadow-card: 0 12px 32px rgba(0, 0, 0, 0.35);
+  --shadow-raised: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="light"] {
+  --ground: #E7F2E6;
+  --ground-deep: #DCEBF5;
+  --ground-deepest: #DCEBF5;
+  --glass-card: rgba(255, 255, 255, 0.72);
+  --glass-raised: rgba(255, 255, 255, 0.72);
+  --glass-inset: rgba(255, 255, 255, 0.6);
+  --hairline: rgba(255, 255, 255, 0.9);
+  --text: #14213D;
+  --text-body: #33415C;
+  --text-muted: #566478;
+  --gold-bright: #7A5F12;
+  --gold-deep: #7A5F12;
+  --violet: #7A5F12;
+  --violet-pressed: #7A5F12;
+  --on-violet: #FFFFFF;
+  --danger: #A63D30;
+  --ayah: var(--text);
+  --quran-border: rgba(122, 95, 18, 0.35);
+  --chip-selected: rgba(122, 95, 18, 0.18);
+  --scrim: rgba(255, 255, 255, 0.6);
+  --shadow-card: 0 8px 24px rgba(20, 33, 61, 0.08);
+  --shadow-raised: 0 8px 24px rgba(20, 33, 61, 0.08);
+}
+
+[data-theme="nahar"] {
+  --ground: #F4EDE3;
+  --ground-deep: #EDE3D4;
+  --ground-deepest: #E6DAC8;
+  --glass-card: #FBF8F3;
+  --glass-raised: #FFFFFF;
+  --glass-inset: #EFE6D9;
+  --hairline: #DCCFBE;
+  --text: #2A1F19;
+  --text-body: #4A3B32;
+  --text-muted: #6B5A4E;
+  --gold-bright: #9E4A30;
+  --gold-deep: #B9573B;
+  --violet: #B9573B;
+  --violet-pressed: #8F4229;
+  --on-violet: #FFFFFF;
+  --danger: #A63D30;
+  --ayah: var(--text);
+  --quran-border: #B9573B59;
+  --chip-selected: #B9573B24;
+  --scrim: rgba(244, 237, 227, 0.6);
+  --shadow-card: 0 8px 24px rgba(42, 31, 25, 0.08);
+  --shadow-raised: 0 16px 40px rgba(42, 31, 25, 0.12);
+}
+
+:root {
+  --grid: 4px;
+  --card-gap: 12px;
+  --page-inset: 20px;
+  --card-pad: 20px;
+  --card-pad-lg: 24px;
+  --section-gap: 28px;
+  --tap-min: 44px;
+  --button-h: 56px;
+  --radius-field: 12px;
+  --radius-dialog-button: 14px;
+  --radius-button: 16px;
+  --radius-sheet: 20px;
+  --radius-card: 24px;
+  --radius-pill: 999px;
+  --blur-card: 20px;
+  --blur-raised: 24px;
+  --lattice-opacity: 0.05;
+  --cone-opacity: 0.06;
+  --scale-normal: 1;
+  --scale-large: 1.125;
+  --scale-larger: 1.25;
+  --icon-size: 22px;
+  --icon-size-tab: 24px;
+  --icon-stroke: 1.5;
+  --font-display: Amiri, serif;
+  --font-quran: "Amiri Quran", Amiri, serif;
+  --font-ui: "IBM Plex Sans Arabic", sans-serif;
+}
+
+@font-face { font-family: 'Amiri'; src: url('fonts/Amiri-Regular-arabic.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'Amiri'; src: url('fonts/Amiri-Bold-arabic.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'Amiri Quran'; src: url('fonts/AmiriQuran-Regular-arabic.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'IBM Plex Sans Arabic'; src: url('fonts/IBMPlexSansArabic-Light-arabic.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'IBM Plex Sans Arabic'; src: url('fonts/IBMPlexSansArabic-Regular-arabic.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'IBM Plex Sans Arabic'; src: url('fonts/IBMPlexSansArabic-Medium-arabic.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'IBM Plex Sans Arabic'; src: url('fonts/IBMPlexSansArabic-SemiBold-arabic.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'IBM Plex Sans Arabic'; src: url('fonts/IBMPlexSansArabic-Bold-arabic.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+
+.wordmark { font-family: var(--font-display); font-size: 72px; line-height: 1; font-weight: 700; }
+
+.blessing-title { font-family: var(--font-display); font-size: 34px; line-height: 1.5; font-weight: 700; }
+
+.screen-title { font-family: var(--font-display); font-size: 30px; line-height: 1.5; font-weight: 700; }
+
+.hadith { font-family: var(--font-display); font-size: 20px; line-height: 1.9; font-weight: 400; }
+
+.dialog-title { font-family: var(--font-display); font-size: 19px; line-height: 1.5; font-weight: 700; }
+
+.scholar { font-family: var(--font-display); font-size: 17px; line-height: 1.9; font-weight: 400; }
+
+.ayah { font-family: var(--font-quran); font-size: 24px; line-height: 2.1; font-weight: 400; }
+
+.button { font-family: var(--font-ui); font-size: 18px; line-height: 1.5; font-weight: 600; }
+
+.body { font-family: var(--font-ui); font-size: 16px; line-height: 1.8; font-weight: 400; }
+
+.field { font-family: var(--font-ui); font-size: 15px; line-height: 1.8; font-weight: 400; }
+
+.secondary { font-family: var(--font-ui); font-size: 14px; line-height: 1.8; font-weight: 400; }
+
+.chip { font-family: var(--font-ui); font-size: 13px; line-height: 1.6; font-weight: 400; }
+
+.label { font-family: var(--font-ui); font-size: 12px; line-height: 1.6; font-weight: 400; }
+
+.tab { font-family: var(--font-ui); font-size: 11px; line-height: 1.6; font-weight: 400; }
